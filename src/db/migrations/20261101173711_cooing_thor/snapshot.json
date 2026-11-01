@@ -1,0 +1,69 @@
+{
+  "type": "diff",
+  "version": "9",
+  "dialect": "postgres",
+  "id": "1ced6744-e192-4781-bb96-ce14f6458fd2",
+  "prevIds": [
+    "b79feaea-4c06-4ebb-8d17-d8b864c31c63"
+  ],
+  "footprints": [
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "customers",
+        "zip"
+      ],
+      "writes": [
+        "s|col|public.customers.zip",
+        "n|col|public.customers.zip",
+        "e|col|public.customers.zip"
+      ],
+      "reads": [
+        "n|tbl|public.customers",
+        "n|sch|public"
+      ]
+    },
+    {
+      "statementType": "drop_column",
+      "statementTarget": [
+        "column",
+        "public",
+        "customers",
+        "zip_code"
+      ],
+      "writes": [
+        "s|col|public.customers.zip_code",
+        "n|col|public.customers.zip_code",
+        "e|col|public.customers.zip_code"
+      ],
+      "reads": [
+        "n|tbl|public.customers",
+        "n|sch|public"
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "op": "create",
+      "row": {
+        "schema": "public",
+        "table": "customers",
+        "name": "zip",
+        "type": "varchar(10)",
+        "typeSchema": null,
+        "notNull": true,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    },
+    {
+      "op": "drop",
+      "key": "columns\u0000[\"public\",\"customers\",\"zip_code\"]"
+    }
+  ]
+}
