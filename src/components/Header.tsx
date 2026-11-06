@@ -24,6 +24,7 @@ export default function Header() {
                   aria-label='logout'
                   title='logout'
                   className='rounded-full'
+                  nativeButton={false}
                   render={
                      <LogoutLink>
                         {' '}
